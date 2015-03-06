@@ -1,0 +1,35 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta http-equiv=content-type content="text/html; charset=utf-8">
+    <meta name="keywords" content="css3, speech bubble beckie"/>
+    <meta name="description" content="build speech bubble with CSS3"/>
+    <title>speech bubble</title>
+    <style>
+        .speech-bubble {
+        background: gray;
+          color: white;
+          font-family: arial;
+          font-size: 30px;
+          display: inline-block;
+          border-radius: 50px / 40px;
+          margin: 80px;
+          padding: 20px 10px;
+          position: relative;
+        }
+        .speech-bubble:before {
+          border: 10px solid gray;
+          border-color: gray transparent transparent gray;
+          border-width: 10px 20px;
+          bottom: -13px;
+          content: '';
+          left: 35px;
+          position: absolute;
+          transform: skewX(-20deg);
+        }
+    </style>
+</head>
+<body>
+    <span class="speech-bubble">Oops!</span>
+</body>
+</html>
