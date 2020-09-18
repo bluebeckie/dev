@@ -1,0 +1,122 @@
+.headline-title-mask:after {
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(80%,rgba(0,0,0,0.6)), to(rgba(0,0,0,.6)));
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 80%);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    content: '';
+    display: block;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: absolute;
+}
+
+.headline-story .active {
+    z-index: 1;
+}
+
+/* fix round-corner missing issue during transition on safari */
+.headline-story .img-mask {
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+/* prevent double tap zoom on headline */
+.headline-story .control {
+    touch-action: manipulation;
+}
+
+.progress-bar:after {
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(0,0,0,0.2)), to(rgba(0,0,0,0)));
+    background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 100%);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    content: '';
+    display: block;
+    bottom: -12px;
+    left: 0;
+    right: 0;
+    top: -8px;
+    position: absolute;
+}
+
+.progress-bar .bar-wrap:before {
+    background: #fff;
+    border-radius: 1.5px;
+    content: '';
+    display: block;
+    flex-grow: 1;
+    height: 3px;
+    list-style: none;
+    opacity: 0.6;
+    width: 100%;
+}
+
+.progress-bar .bar-anim {
+    animation: progress 5s linear 0s 1 normal forwards;
+    will-change: transform;
+}
+
+.progress-bar .bar-on {
+    transform: translateX(100%);
+}
+
+@keyframes progress {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+}
+
+.ripple {
+    animation: rippleShadow 3s linear 1s infinite;
+}
+
+.ripple:before, .ripple:after {
+    background: #fff;
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 60px;
+    left: -30px;
+    opacity: 0;
+    position: absolute;
+    top: -30px;
+    width: 60px;
+}
+
+.ripple:before {
+    animation: ripple 3s linear 2s infinite;
+}
+
+.ripple:after {
+    animation: ripple 3s linear 3s infinite;
+}
+
+@keyframes rippleShadow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+    50% {
+        box-shadow: 0 0 0 15px rgba(255, 255, 255, 1);
+    }
+    100% {
+        box-shadow: 0 0 0 30px rgba(255, 255, 255, 0);
+    }
+}
+
+@keyframes ripple {
+    0% {
+        opacity: 0;
+        transform: scale(0.03);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
