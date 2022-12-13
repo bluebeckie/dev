@@ -15,8 +15,11 @@
 AKV10000: Request is missing a Bearer or PoP token
 ```
 -> dependecy version should be:
-    ├── @azure/identity@3.0.1
-    └── @azure/keyvault-secrets@4.6.0
+<pre>
+├── @azure/identity@3.0.1
+└── @azure/keyvault-secrets@4.6.0
+</pre>
+
 ```
 Error: Couldn't detect a version for the platform 'nodejs' in the repo.
 ```
